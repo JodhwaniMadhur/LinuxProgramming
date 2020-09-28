@@ -1,0 +1,1 @@
+This C program is used to demonstrate the concept of file I/O redirection i.e take input from a file and give output to a file since this saves two things  that are time for entering input manually and second is the limit that the terminal or shell buffer has to display is not present since we can take output in our file.
