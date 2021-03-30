@@ -1,0 +1,7 @@
+This program is used to rename all the regular files in a directory
+
+INPUT:Directory name
+Output:Renamed files in the directory
+
+In this we use the stat and dirent inbuilt structures,open the directory and get info about files and check if they are regular
+files and then if they are we rename them and print the names and then close the directory.

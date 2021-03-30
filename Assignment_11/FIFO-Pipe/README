@@ -1,0 +1,9 @@
+These programs demonstrate the internal concept of pipe in the LINUX OS
+Here we use a buffer array and write inside it from write file
+and read inside the buffer from the read file,once we write we unlink the fifo
+We have to tell the read file about the location of the buffer and the read file reads from the buffer.
+then we close the fifo and exit
+
+
+INPUT:CHARACTERS
+OUTPUT:SAME CHARACTERS
