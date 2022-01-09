@@ -9,14 +9,14 @@ int main(int argc,char *argv[])
 {
 	
 	DIR *d;
-	int i;
-	struct dirent *dir;
 	struct stat sb;
 	d=opendir(argv[1]);
 	if(d)
 	{
+		struct dirent *dir;
 		while((dir=readdir(d))!=NULL)
 		{
+			int i;
 			i=stat(argv[2] , &sb);
 			if(i==0)
 			{

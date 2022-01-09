@@ -8,12 +8,13 @@
 int main(int argc,char *argv[])
 {
 	DIR *d;
-	int fd=0,fd2=0;
-	struct dirent *dir;
-	char arr[BLOCK];
+	int fd=0;
 	d=opendir(argv[1]);
 	if(d)
 	{
+		char arr[BLOCK];
+		struct dirent *dir;
+		int fd2=0;
 		fd2=open(argv[2],O_WRONLY|O_APPEND);
 		while((dir=readdir(d))!=NULL)
 		{

@@ -8,8 +8,7 @@ int main(int argc,char *argv[])
 	printf("Start of program\n");
 	DIR *d;
 	struct dirent *dir;
-	int fd=0,m=0;
-	char arr[100];
+	int fd=0;
 	fd=creat(argv[0],0777);
 	if(fd<0) printf("Unable to create file\n");
 	fd=open(argv[0],O_WRONLY|O_APPEND);
@@ -17,11 +16,16 @@ int main(int argc,char *argv[])
 	d=opendir("/home/madhulicious/Desktop");
 	if(d)
 	{
+		int m=0;
+		char arr[100];
 		while((dir=readdir(d))!=NULL)
 		{
 			strcpy(arr,dir->d_name);
 			write(fd,"\n",1);
 			m=write(fd,arr,strlen(dir->d_name));
+			if(m!=0){
+				printf("Error");
+			}
 		}
 	}
 	closedir(d);

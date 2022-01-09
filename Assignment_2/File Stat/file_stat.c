@@ -9,7 +9,6 @@ int main(int argc,char *argv[])
 {
   ssize_t read;
   
-  size_t buf_size = 0;
 
   
 

@@ -17,10 +17,10 @@ int search(int no,int crr[],int lem)
 
 void sort(int brr[],int lem)
 {
-    int i=0,j=0,key=0;
+    int i=0;
     for(i=0;i<lem;++i)
     {
-        
+        int j=0,key=0;
         key=brr[i];
         j=i-1;
         while((j>=0)&&(brr[j]>key))

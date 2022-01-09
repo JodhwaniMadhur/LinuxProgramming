@@ -5,7 +5,7 @@
 
 int main()
 {
-	int ret=0,rc=0;
+	int rc=0;
 	pthread_t thread1;
 	printf("Inside main thread\n");
 	int policy, s=1;

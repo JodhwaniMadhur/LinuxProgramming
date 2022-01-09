@@ -6,12 +6,12 @@
 int main(int argc,char *argv[])
 {
 	struct stat sb;
-	struct dirent *dir;
 	DIR *d;
 	int fd=0,i=0,j=0;
 	d=opendir(argv[1]);
 	if(d)
 	{
+		struct dirent *dir;
 		while((dir=readdir(d))!=NULL)
 		{
 			stat(dir->d_name,&sb);
@@ -24,7 +24,7 @@ int main(int argc,char *argv[])
 				}
 				else
 				{
-					printf("%s File truncated successfully\n");
+					printf("%s File truncated successfully\n",dir->d_nam);
 				}
 			}
 			else if(sb.st_size<1024)
