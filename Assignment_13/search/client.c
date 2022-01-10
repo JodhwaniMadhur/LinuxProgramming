@@ -8,7 +8,7 @@ int main(int argc,char *argv[])
     void *lib=NULL;
     int (*fptr1)(int*,int);
     int (*fptr2)(int*,int*,int);
-    int ret,i=0;
+    int ret;
     int arr[]={78,65,89,0,1,2,5,6,66,5,4,7,76,7,1,8,9,56,74,20};
     int len=sizeof(arr)/sizeof(int);
 

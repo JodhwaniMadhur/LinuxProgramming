@@ -26,6 +26,6 @@ int main(int argc,char* argv[])
 	}
 	printf("%s\n",Arr);
 	close(fd);
-	free(Arr);
+	//free(Arr);
 	return 0;
 }

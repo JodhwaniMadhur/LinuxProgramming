@@ -7,11 +7,9 @@
 
 int main(void)
 {
-    int fd[2],nbytes;
+    int fd[2];
     pid_t childpid;
-    
     char buffer[100];
-
     pipe(fd);
     childpid=fork();
     if(childpid==0)
@@ -23,6 +21,7 @@ int main(void)
     }
     else
     {
+        int nbytes;
        close(fd[1]);
        nbytes=read(fd[0],buffer,sizeof(buffer));
        printf("Recieved String:%s\n",buffer);

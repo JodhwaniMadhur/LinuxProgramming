@@ -26,8 +26,8 @@ int main(int argc,char *argv[])
 					printf("File st_uid %d \n",s2.st_uid);
   					printf("File st_blksize %ld \n",s2.st_blksize);
   					printf("File st_gid %d \n",s2.st_gid);
-  					printf("File st_blocks %ld \n",(int)s2.st_blocks);
-  					printf("File st_size %ld \n",(int)s2.st_size);
+  					printf("File st_blocks %d \n",(int)s2.st_blocks);
+  					printf("File st_size %d \n",(int)s2.st_size);
   					printf("File st_nlink %u \n",(unsigned int)s2.st_nlink);
   					printf("File Permissions User\n");
   					printf((s2.st_mode & S_IRUSR)? "r":"-");

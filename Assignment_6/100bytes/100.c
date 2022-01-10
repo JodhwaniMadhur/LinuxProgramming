@@ -9,7 +9,6 @@ int main(int argc,char *argv[])
 {
 	
 	DIR *d;
-	long long int m = 0;
 	struct dirent *dir;
 	struct stat sb;
 	

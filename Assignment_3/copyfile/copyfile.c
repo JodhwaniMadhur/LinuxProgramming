@@ -9,7 +9,7 @@ int main(int argc,char *argv[])
 {
 	
 	char buf[BLOCK];
-	int fd1=0,fd2=0,iRet1=0,iRet2=0;
+	int fd1=0,fd2=0,iRet1=0;
 	
 	fd1=open(argv[1],O_RDONLY);
 	
