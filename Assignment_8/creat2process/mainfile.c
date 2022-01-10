@@ -4,7 +4,7 @@
 
 int main(int argc,char *argv[])
 {
-	int ret1=0,ret2=0,status=0,pid=0;
+	int ret1=0,ret2=0,status=0;
 	ret1=fork();
 	if(ret1==0)
 	{
@@ -13,6 +13,7 @@ int main(int argc,char *argv[])
 	}
 	else
 	{
+		int pid=0;
 		printf("Parent waiting for p1\n");
 		pid=wait(&status);
 		printf("Terminating Child Process 1\n");
@@ -25,6 +26,7 @@ int main(int argc,char *argv[])
 	}
 	else
 	{
+		int pid=0;
 		printf("Parent waiting for p2\n");
 		pid=wait(&status);
 		printf("Terminating Child Process 2\n");
